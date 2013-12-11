@@ -1,6 +1,6 @@
 /*
- * grunt-cache
- * https://github.com/hpp/cache
+ * asset-cache-control
+ * https://github.com/jessiehan/asset-cache-control
  *
  * Copyright (c) 2013 hpp
  * Licensed under the MIT license.
@@ -12,17 +12,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>',
-      ],
-      options: {
-        jshintrc: '.jshintrc',
-      },
-    },
-
+    
     // Before generating any new files, remove any previously-created files.
     clean: {
       tests: ['tmp'],
@@ -59,7 +49,6 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
@@ -68,6 +57,6 @@ module.exports = function(grunt) {
   //grunt.registerTask('test', ['clean', 'cache', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'cache']);
+  grunt.registerTask('default', ['cache']);
 
 };

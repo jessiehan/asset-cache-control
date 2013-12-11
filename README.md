@@ -45,6 +45,8 @@ grunt.initConfig({
 In this example, we have index.html which contains hello.js and hello.css.
 In Gruntfile.js, write as below, then `grunt`, we can get the index.html which has assets url with md5.
 
+Notice to write the correct assetUrl.
+
 ```js
 grunt.initConfig({
     cache: {

@@ -1,6 +1,6 @@
 /*
- * grunt-cache
- * https://github.com/hpp/cache
+ * asset-cache-control
+ * https://github.com/jessiehan/asset-cache-control
  *
  * Copyright (c) 2013 hpp
  * Licensed under the MIT license.
