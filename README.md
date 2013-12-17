@@ -2,6 +2,20 @@
 
 control the cache of assets by appending md5 hash to asset url
 
+For example
+
+in index.html we have
+
+```html
+<script type="text/javascript" src="js/hello.js"></script>
+```
+
+
+after running the task
+
+```html
+<script type="text/javascript" src="js/hello.js?t=cefe2283"></script>
+```
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 
