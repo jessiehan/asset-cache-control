@@ -48,10 +48,10 @@ module.exports = function(grunt) {
 				//get the full asset text, like "text/javascript" src="js/hello.js?t=cefe2283"
 				var reg=new RegExp('".*'+assetUrl+'.*"','g');
 				var fullAssetUrl=reg.exec(data).toString();
-				
 				//only leave hello.js?t=cefe2283
-				var assetName=fullAssetUrl.substring(fullAssetUrl.indexOf(assetUrl),fullAssetUrl.length-1);
-				
+				var start=fullAssetUrl.indexOf(assetUrl);
+				var assetName=fullAssetUrl.substring(start,fullAssetUrl.indexOf('"',start));
+
 				var newurl = getNewAssetsUrl(assetName, md5sum.digest('hex'));
 				var newdata = data.replace(assetName, newurl);
 
